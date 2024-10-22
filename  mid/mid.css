@@ -25,6 +25,7 @@ body{
     font-weight: 100;   
     line-height: 1.4em; 
     font-size: 12px;
+ 
 }
 .left-side h2{
     font-weight: 500;
@@ -67,6 +68,23 @@ body{
     background-color: white;
     width: 400px;
 }
+.content{
+    padding: 25px;
+}
+.content  h2{
+    margin-bottom: 10px;
+}
+.content h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.content h4{
+    margin-bottom: 5px;
+}
+.content p{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
 .upper{
     background-color: rgb(240, 240, 240);
     height: 200px;
@@ -98,3 +116,4 @@ body{
     display: none;
     z-index: 2; 
 }
+
