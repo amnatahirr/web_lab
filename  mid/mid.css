@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+   
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    
+}
+.cv{
+    display: flex;
+    margin-top: 20px;
+}
+.left-side{
+    background-color: rgb(53, 53, 53);
+    width: 256px;
+    height: 800px;
+    color: white;
+    font-family:sans-serif; 
+    padding: 20px;
+    font-weight: 100;   
+    line-height: 1.4em; 
+    font-size: 12px;
+}
+.left-side h2{
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    font-size: 1.25em;
+}
+.left-side hr{
+    margin-bottom: 10px;
+}
+.contact{
+    margin-top: 20px;
+}
+.contact li{
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+}
+.contact li i{
+    margin-right: 25px;
+   
+}
+.img-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+}
+.left-side img{ 
+    width: 120px;
+    border-radius: 50%;
+}
+.skills{
+    margin-left: 20px;
+    line-height: 2em;
+}
+.right-side{
+    background-color: white;
+    width: 400px;
+}
+.upper{
+    background-color: rgb(240, 240, 240);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    line-height: 2.5em;
+}
+.upper .first{
+    font-weight: lighter;
+    font-size: 33px;
+}
+.upper .last{
+    font-weight: bolder;
+    font-size: 43px;
+}
+.upper .software{
+    font-weight: 300;
+    font-size: 25px;
+}
+.introduction {
+    position: absolute; 
+    top: 20px; 
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 2; 
+}
