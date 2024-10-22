@@ -61,7 +61,6 @@ function toggleUserStatus() {
         data: JSON.stringify({ status: newStatus }),
         success: function() {
             console.log(`User status updated to ${newStatus}`);
-            // Update the UI for the specific user
             const userCard = $(`#listUsers .toggle-status[data-id='${userId}']`);
             userCard.attr("data-status", newStatus);
             if (newStatus === "active") {
@@ -83,16 +82,12 @@ function handleFormSubmission(event) {
     var userId = $("#createBtn").attr("data-id");  
     var name = $("#first_name").val() + " " + $("#last_name").val();
     var email = $("#email").val();
-    
-    // Get selected gender
     var gender = $("input[name='gender']:checked").val(); 
     var status = "active"; 
-
-    var requestData = { name: name, email: email, gender: gender, status: status }; // Include gender
-    console.log("Request Data for Creation:", requestData); // Log the request data
+    var requestData = { name: name, email: email, gender: gender, status: status };
+    console.log("Request Data for Creation:", requestData); 
 
     if (userId) {
-        // Update existing user
         $.ajax({
             url: "https://gorest.co.in/public/v2/users/" + userId,
             method: "PUT",
@@ -110,7 +105,6 @@ function handleFormSubmission(event) {
             }
         });
     } else {
-        // Create new user
         $.ajax({
             url: "https://gorest.co.in/public/v2/users",
             method: "POST",
@@ -129,11 +123,6 @@ function handleFormSubmission(event) {
         });
     }
 }
-
-
-
-
-
 
 function editUser() {
     var userID = $(this).attr("data-id");  
