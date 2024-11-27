@@ -1,0 +1,26 @@
+<div class="mx-4">
+    <a href="/admin/create-category" class="btn " style="background-color: #0047b6; color: white;">Create New Category</a>
+    <table class="table table-hover table-striped ">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Number of Items</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for( let index = 0; index < categories.length; index++ ) { %>
+                <tr>
+                    <td><%= categories[index].title %></td>
+                    <td><%= categories[index].description %></td>
+                    <td><%= categories[index].numberOfItems %></td>
+                    <td>
+                        <a href="/admin/categories-edit-form/<%= categories[index]._id %>" class="btn btn-warning">Edit</a>
+                        <a href="/admin/categories/delete/<%= categories[index]._id %>" class="btn btn-danger">Del</a>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    </div>
