@@ -16,7 +16,7 @@ router.get("/admin/create",(req,res)=>{
   res.render("admin/create",{ layout: "admin/admin-layout" });
 })
 
-router.post("/admin/create", upload.single("productImage"), async (req, res) => {
+router.post("/admin/create",  async (req, res) => {
   try {
     const { title, description, price, isFeatured } = req.body;
     const isFeaturedValue = isFeatured === "on";
@@ -26,7 +26,7 @@ router.post("/admin/create", upload.single("productImage"), async (req, res) => 
       description,
       price,
       isFeatured: isFeaturedValue,
-      image: req.file ? req.file.filename : null, // Store the file name
+  
     });
 
     console.log("Uploaded file:", req.file); // Debugging uploaded file
